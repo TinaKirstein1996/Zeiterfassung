@@ -1,9 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
+/* Import Google font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	/*align-items: center;*/
+	justify-content: center;
+	min-height: 100vh;
+	overflow: hidden;
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	color: rgba(255, 255, 255, 1);
+	margin: 10px 10px;
+	padding: 0;
+	background: #4A4A4A
+}
+
+.time_today{
+	order: 1;
+	flex-wrap: wrap;
+	line-height: 30px;
+}
 
 /* The side navigation menu */
 .sidenav {
@@ -73,9 +95,14 @@ button:hover {
   position: relative;
   left: 20vw;
   top: 5vw;
-  background-color: #0d318c;
+  background-color: #208ef5;
   width: 40px;
   padding: 10px 60px 10px 30px;
+}
+
+.quicktrackingbtn {
+  background-color: #208ef5;
+  border-radius: 8px;
 }
 
 #image {
@@ -96,7 +123,6 @@ span.psw {
   padding: 20px;
 }
 
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
@@ -109,49 +135,3 @@ span.psw {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-</style>
-</head>
-<body>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Kalender</a>
-  <a href="#">Ansprechpartner</a>
-  <a href="#">Infos</a>
-</div>
-
-<!-- Use any element to open the sidenav -->
-<button onclick="openNav()" class = menubtn >Men&uuml; &ouml;ffnen</button>
-
-<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-<div id="main">
-  <h2>Zeiterfassung</h2>
-  <div>
-    <button onclick="document.getElementById('id05').style.display='block'" class=timetrackingbtn style="width:auto;">Start / Stop</button>
-  </div>
-  <div>
-    <input id="image" type="image" width="300" height="300" alt="Timetracking" src="clock.jpg"/>
-  </div>
-  <div>
-    <button onclick="document.getElementById('id02').style.display='block'" class=sidebarbtn style="width:auto;">Kalender</button>
-    <br>
-    <button onclick="document.getElementById('id03').style.display='block'" class=sidebarbtn style="width:auto;">Ansprechpartner</button>
-    <br>
-    <button onclick="document.getElementById('id04').style.display='block'" class=sidebarbtn style="width:auto;">Infos</button>
-  </div>
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-
-</body>
-</html>
